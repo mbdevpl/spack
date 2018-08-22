@@ -34,6 +34,10 @@ class Amrex(AutotoolsPackage):
     homepage = "https://amrex-codes.github.io/amrex/"
     git      = "https://github.com/AMReX-Codes/amrex.git"
 
+    url      = "https://github.com/AMReX-Codes/amrex/archive/18.08.1.zip"
+    list_url = "https://github.com/AMReX-Codes/amrex/archive/"
+    list_depth = 1
+
     version('18.08.1', tag='18.08.1')
     version('18.07', tag='18.07')
     version('18.06', tag='18.06')
