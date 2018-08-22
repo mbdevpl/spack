@@ -36,6 +36,9 @@ class Amrex(AutotoolsPackage):
 
     version('18.08.1', tag='18.08.1')
     version('18.07', tag='18.07')
+    version('18.06', tag='18.06')
+    version('18.05', tag='18.05')
+
     version('develop', branch='development')
     version('master', branch='master')
 
