@@ -90,7 +90,7 @@ class Opencv(CMakePackage, CudaPackage):
 
     variant('contrib', default=False, description='Adds in code from opencv_contrib.')
     contrib_vers = [
-        '3.4.12', '4.0.0', '4.0.1', '4.1.0', '4.1.1', '4.1.2', '4.2.0', '4.5.0'
+        '3.4.12', '4.0.0', '4.0.1', '4.1.0', '4.1.1', '4.1.2', '4.2.0', '4.5.0', 'master'
     ]
     for cv in contrib_vers:
         resource(name="contrib",
@@ -251,7 +251,7 @@ class Opencv(CMakePackage, CudaPackage):
 
         if '+contrib' in spec or '+cuda' in spec:
             args.append('-DOPENCV_EXTRA_MODULES_PATH={0}'.format(
-                join_path(self.stage.source_path, 'opencv_contrib/modules')))
+                join_path(self.stage.source_path, '../spack-src/spack-src/modules')))
 
         if '+cuda' in spec:
             if spec.variants['cuda_arch'].value[0] != 'none':
